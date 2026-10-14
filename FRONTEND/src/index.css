@@ -5,35 +5,97 @@
 ========================================================= */
 
 :root {
-    --navy: #123f62;
-    --navy-dark: #082d4a;
-    --teal: #1d827d;
-    --teal-dark: #14625e;
+    /* Brand */
+    --color-primary: #1D827D;
+    --color-primary-hover: #176B67;
+    --color-primary-active: #125854;
+    --color-secondary: #64748B;
+    --color-accent: #E1F1EF;
+
+    /* Surfaces */
+    --color-bg: #F7FAFA;
+    --color-surface: #FFFFFF;
+    --color-surface-subtle: #EDF5F4;
+    --color-surface-hover: #FCFEFD;
+
+    /* Navigation */
+    --color-nav-bg: #FFFFFF;
+    --color-nav-text: #243B3A;
+    --color-nav-active-bg: #E1F1EF;
+
+    /* Borders and effects */
+    --color-border: #DCE6E4;
+    --color-border-strong: #CBD8D5;
+    --shadow-card: 0 2px 8px #172b2a0f;
+    --shadow-dropdown: 0 8px 24px #172b2a1a;
+    --focus-ring: 0 0 0 3px #1d827d33;
+
+    /* Text */
+    --color-text: #172B2A;
+    --color-text-secondary: #586968;
+    --color-text-muted: #758582;
+
+
+    --primary-app: var(--color-primary);
+    --primary-app-dark: var(--color-primary-hover);
+    --secondary-app: var(--color-secondary);
+    /* --secondary-app-dark: var(--color-secondary); */
     --green: #147b5d;
-    --text-primary: #102332;
-    --text-secondary: #64748b;
-    --bg-primary: #ffffff;
-    --bg-secondary: #f8fafc;
-    --bg-card: #ffffff;
-    --border-color: #e2e8f0;
-    --nav-bg: rgba(255, 255, 255, 0.92);
-    --shadow: 0 18px 50px rgba(15, 47, 72, 0.08);
-    --shadow-hover: 0 20px 40px rgba(29, 130, 125, 0.12);
+   --text-primary: var(--color-text);
+    --text-secondary: var(--color-text-secondary);
+    --bg-primary: var(--color-bg);
+    /* --bg-secondary: var(--color-surface); */
+    --bg-card: var(--color-surface);
+    --border-color: var(--color-border);
+    --nav-bg: var(--color-nav-bg);
+    --shadow: 0 18px 50px #0f2f4814;
+    --shadow-hover: 0 20px 40px #1d827d1f;
 }
 
 [data-theme="dark"] {
-    --navy: #38bdf8;
-    --navy-dark: #0284c7;
-    --teal: #2dd4bf;
-    --teal-dark: #14b8a6;
+    /* Brand */
+    --color-primary: #1D827D;
+    --color-primary-hover: #269B94;
+    --color-primary-active: #176B67;
+    --color-secondary: #A5B5B3;
+    --color-accent: #203B37;
+
+    /* Surfaces */
+    --color-bg: #101918;
+    --color-surface: #192523;
+    --color-surface-subtle: #233532;
+    --color-surface-hover: #1D2B28;
+
+    /* Navigation */
+    --color-nav-bg: #192523;
+    --color-nav-text: #E8F0EF;
+    --color-nav-active-bg: #203B37;
+
+    /* Borders and effects */
+    --color-border: #304440;
+    --color-border-strong: #405550;
+    --shadow-card: 0 2px 8px rgba(0, 0, 0, 0.18);
+    --shadow-dropdown: 0 8px 24px rgba(0, 0, 0, 0.30);
+    --focus-ring: 0 0 0 3px rgba(77, 182, 174, 0.28);
+
+    /* Text */
+    --color-text: #E8F0EF;
+    --color-text-secondary: #B4C4C1;
+    --color-text-muted: #8C9D99;
+
+
+    --primary-app: var(--color-primary);
+    --primary-app-dark: var(--color-primary-hover);
+    --secondary-app: var(--color-secondary);
+    /* --secondary-app-dark: #14b8a6; */
     --green: #34d399;
-    --text-primary: #f1f5f9;
-    --text-secondary: #94a3b8;
-    --bg-primary: #0f172a;
-    --bg-secondary: #1e293b;
-    --bg-card: #1e293b;
-    --border-color: #334155;
-    --nav-bg: rgba(15, 23, 42, 0.92);
+    --text-primary: var(--color-text);
+    --text-secondary: var(--color-text-secondary);
+    --bg-primary: var(--color-bg);
+    /* --bg-secondary: var(--color-surface); */
+    --bg-card: var(--color-surface);
+    --border-color: var(--color-border);
+    --nav-bg: var(--color-nav-bg);
     --shadow: 0 18px 50px rgba(0, 0, 0, 0.4);
     --shadow-hover: 0 20px 40px rgba(45, 212, 191, 0.15);
 }
@@ -113,7 +175,7 @@ a {
     display: grid;
     place-items: center;
     border-radius: 50%;
-    background: var(--teal);
+    background: var(--primary-app);
     color: white;
     font-family: Manrope, sans-serif;
     font-size: 17px;
@@ -151,7 +213,7 @@ a {
 }
 
 .nav-links a:hover {
-    color: var(--teal);
+    color: var(--primary-app);
 }
 
 .nav-right {
@@ -173,8 +235,8 @@ a {
 }
 
 .theme-toggle-btn:hover {
-    border-color: var(--teal);
-    color: var(--teal);
+    border-color: var(--primary-app);
+    color: var(--primary-app);
     transform: rotate(15deg);
 }
 
@@ -212,13 +274,13 @@ a {
 .primary-button {
     border: 0;
     padding: 14px 22px;
-    background: var(--teal);
+    background: var(--primary-app);
     color: #ffffff;
     box-shadow: 0 8px 24px rgba(29, 130, 125, 0.25);
 }
 
 .primary-button:hover {
-    background: var(--teal-dark);
+    background: var(--primary-app-dark);
     transform: translateY(-2px);
     box-shadow: 0 12px 28px rgba(29, 130, 125, 0.35);
 }
@@ -240,8 +302,8 @@ a {
 }
 
 .secondary-button:hover {
-    border-color: var(--teal);
-    color: var(--teal);
+    border-color: var(--primary-app);
+    color: var(--primary-app);
     transform: translateY(-2px);
 }
 
@@ -265,7 +327,7 @@ a {
 .hero {
     position: relative;
     padding: 60px 0;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     transition: background 0.3s ease;
 }
 
@@ -289,7 +351,7 @@ a {
     display: inline-flex;
     align-items: center;
     gap: 7px;
-    color: var(--teal);
+    color: var(--primary-app);
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.12em;
@@ -307,7 +369,7 @@ a {
 
 .hero h1 span {
     display: block;
-    color: var(--teal);
+    color: var(--primary-app);
 }
 
 .hero-content > p {
@@ -400,7 +462,7 @@ a {
 
 .popular-service > span {
     white-space: nowrap;
-    color: var(--teal);
+    color: var(--primary-app);
     font-weight: 800;
     font-size: 14px;
 }
@@ -413,7 +475,7 @@ a {
     padding: 8px 0;
     border: 0;
     background: transparent;
-    color: var(--teal);
+    color: var(--primary-app);
     font-size: 13px;
     font-weight: 800;
 }
@@ -442,7 +504,7 @@ a {
 }
 
 .section-eyebrow {
-    color: var(--teal);
+    color: var(--primary-app);
     font-size: 11px;
     font-weight: 800;
     letter-spacing: 0.12em;
@@ -496,7 +558,7 @@ a {
 
 .search-input:focus {
     outline: none;
-    border-color: var(--teal);
+    border-color: var(--primary-app);
     box-shadow: 0 0 0 3px rgba(45, 212, 191, 0.15);
 }
 
@@ -529,9 +591,9 @@ a {
 }
 
 .pill-btn:hover, .pill-btn.active {
-    background: var(--teal);
+    background: var(--primary-app);
     color: #ffffff;
-    border-color: var(--teal);
+    border-color: var(--primary-app);
 }
 
 /* =========================================================
@@ -555,7 +617,7 @@ a {
 }
 
 .service-category.expanded {
-    border-color: var(--teal);
+    border-color: var(--primary-app);
     box-shadow: var(--shadow-hover);
 }
 
@@ -603,7 +665,7 @@ a {
     align-items: center;
     justify-content: center;
     font-size: 18px;
-    color: var(--teal);
+    color: var(--primary-app);
     font-weight: 600;
     flex-shrink: 0;
     background: var(--bg-card);
@@ -667,9 +729,9 @@ a {
 }
 
 .service-details-button {
-    border: 1px solid var(--teal);
+    border: 1px solid var(--primary-app);
     background: transparent;
-    color: var(--teal);
+    color: var(--primary-app);
     border-radius: 8px;
     padding: 6px 14px;
     font-size: 13px;
@@ -679,7 +741,7 @@ a {
 }
 
 .service-details-button:hover {
-    background: var(--teal);
+    background: var(--primary-app);
     color: #ffffff;
 }
 
@@ -689,7 +751,7 @@ a {
 
 .calculator-section {
     padding: 80px 0;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
     content-visibility: auto;
     contain-intrinsic-size: 700px;
 }
@@ -740,11 +802,11 @@ a {
 }
 
 .calc-item-card:hover {
-    border-color: var(--teal);
+    border-color: var(--primary-app);
 }
 
 .calc-item-card.selected {
-    border-color: var(--teal);
+    border-color: var(--primary-app);
     background: rgba(45, 212, 191, 0.08);
 }
 
@@ -756,16 +818,16 @@ a {
     display: grid;
     place-items: center;
     font-size: 12px;
-    color: var(--teal);
+    color: var(--primary-app);
     font-weight: 800;
     background: var(--bg-card);
     flex-shrink: 0;
 }
 
 .calc-item-card.selected .calc-checkbox {
-    background: var(--teal);
+    background: var(--primary-app);
     color: #ffffff;
-    border-color: var(--teal);
+    border-color: var(--primary-app);
 }
 
 .calc-item-info {
@@ -790,7 +852,7 @@ a {
 .calc-item-price {
     font-size: 13px;
     font-weight: 700;
-    color: var(--teal);
+    color: var(--primary-app);
     white-space: nowrap;
 }
 
@@ -806,7 +868,7 @@ a {
     display: flex;
     align-items: center;
     gap: 10px;
-    color: var(--teal);
+    color: var(--primary-app);
     margin-bottom: 20px;
 }
 
@@ -863,7 +925,7 @@ a {
 .calc-total-box strong {
     font-size: 22px;
     font-weight: 800;
-    color: var(--teal);
+    color: var(--primary-app);
 }
 
 /* =========================================================
@@ -892,7 +954,7 @@ a {
 
 .why-card:hover {
     transform: translateY(-3px);
-    border-color: var(--teal);
+    border-color: var(--primary-app);
 }
 
 .why-icon {
@@ -900,7 +962,7 @@ a {
     height: 42px;
     border-radius: 12px;
     background: rgba(45, 212, 191, 0.12);
-    color: var(--teal);
+    color: var(--primary-app);
     display: grid;
     place-items: center;
 }
@@ -951,7 +1013,7 @@ a {
     height: 44px;
     border-radius: 12px;
     background: rgba(45, 212, 191, 0.12);
-    color: var(--teal);
+    color: var(--primary-app);
     display: grid;
     place-items: center;
     flex-shrink: 0;
@@ -975,7 +1037,7 @@ a {
 
 .contact-section {
     padding: 80px 0;
-    background: var(--bg-secondary);
+    background: var(--bg-primary);
 }
 
 .contact-box {
@@ -1041,7 +1103,7 @@ a {
     width: 42px;
     height: 42px;
     border-radius: 50%;
-    background: var(--teal);
+    background: var(--primary-app);
     color: white;
     display: grid;
     place-items: center;
@@ -1183,7 +1245,7 @@ a {
     height: 48px;
     border-radius: 14px;
     background: rgba(45, 212, 191, 0.12);
-    color: var(--teal);
+    color: var(--primary-app);
     display: grid;
     place-items: center;
     margin-bottom: 16px;
@@ -1192,7 +1254,7 @@ a {
 .modal-category {
     font-size: 11px;
     font-weight: 800;
-    color: var(--teal);
+    color: var(--primary-app);
     letter-spacing: 0.12em;
 }
 
@@ -1205,7 +1267,7 @@ a {
 .modal-price {
     font-size: 22px;
     font-weight: 800;
-    color: var(--teal);
+    color: var(--primary-app);
     margin-bottom: 15px;
 }
 
